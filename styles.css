@@ -1,13 +1,14 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
 }
 
 nav {
-  background-color: #333;
+  background-color: #6200ea;
   color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
@@ -26,6 +27,8 @@ nav {
 .navbar a {
   color: #fff;
   text-decoration: none;
+  display: flex;
+  align-items: center;
   transition: color 0.3s ease;
 }
 
@@ -33,14 +36,15 @@ nav {
   color: #ccc;
 }
 
+.navbar a .material-icons {
+  margin-right: 8px;
+}
+
 header {
   text-align: center;
   padding: 3rem 0;
-  transition: background-color 0.3s ease;
-}
-
-header:hover {
-  background-color: #f0e68c;
+  background-color: #673ab7;
+  color: #fff;
 }
 
 .container {
@@ -82,7 +86,7 @@ header:hover {
 }
 
 .education-section {
-  background-color: #ffeeba;
+  background-color: #fff;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -94,7 +98,7 @@ header:hover {
 }
 
 .project-section {
-  background-color: #f0e68c;
+  background-color: #fff;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -142,14 +146,15 @@ p {
 .contact-me {
   text-align: center;
   padding: 2rem;
-  background-color: #f0e68c;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
+
 .contact-me:hover {
-	background-color: #8cf096;
-  }
+  background-color: #f0f0f0;
+}
 
 .contact-me h2 {
   margin-bottom: 1rem;
@@ -167,11 +172,18 @@ p {
 .social-media a {
   display: inline-block;
   margin: 0 15px;
+  color: #6200ea;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #3700b3;
 }
 
 .footer {
   text-align: center;
   padding: 1rem;
-  background-color: #333;
+  background-color: #6200ea;
   color: #fff;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
 }
