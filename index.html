@@ -3,77 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Subhajit Mahanta | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Subhajit Mahanta | Web Developer & Java Specialist</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">SM</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="cta-button">
+        <a href="#contact">Hire Me</a>
+      </div>
+    </div>
+  </nav>
 
-  <!-- Navbar -->
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-extrabold text-blue-600">Subhajit Mahanta</h1>
-      <nav class="space-x-6 text-sm font-semibold">
-        <a href="#about" class="hover:text-blue-500">About</a>
-        <a href="#projects" class="hover:text-blue-500">Projects</a>
-        <a href="#contact" class="hover:text-blue-500">Contact</a>
-      </nav>
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Hello, I'm <span>Subhajit Mahanta</span></h1>
+        <p>Web Developer & Java Specialist</p>
+        <a href="#projects" class="btn-primary">View My Work</a>
+      </div>
+      <div class="hero-image">
+        <img src="subhajit.jpg" alt="Subhajit Mahanta" />
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-blue-50 py-20 text-center">
-    <h2 class="text-4xl font-bold mb-4">Hi, I'm Subhajit 👋</h2>
-    <p class="text-lg text-gray-700 max-w-2xl mx-auto">Java Developer & Frontend Enthusiast passionate about building elegant web applications and solving real-world problems.</p>
-    <a href="#projects" class="mt-6 inline-block px-8 py-3 bg-blue-600 text-white rounded-full text-sm font-semibold hover:bg-blue-700">See My Work</a>
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I’m a passionate web developer and Java programmer dedicated to creating fast, clean, and user-friendly applications.
+      </p>
+    </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="max-w-5xl mx-auto py-16 px-6">
-    <h3 class="text-3xl font-bold mb-6">About Me</h3>
-    <p class="text-gray-700 text-lg">I'm a Computer Science graduate with strong fundamentals in Java, web technologies, and SQL. I enjoy building responsive applications, working with APIs, and thriving in Agile teams. My journey is fueled by continuous learning and creating impactful solutions.</p>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="bg-gray-50 py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-10">Projects</h3>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-2">Weather App</h4>
-          <p class="text-gray-700 mb-4">Real-time weather dashboard using the OpenWeather API. Mobile responsive and sleek UI.</p>
-          <a href="#" class="text-blue-600 font-semibold hover:underline">View Live →</a>
+  <section id="projects" class="section alt-bg">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="Project1.png" alt="Project 1" />
+          <h3>Project One</h3>
+          <p>Brief description of the project goes here.</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-2">Personal Portfolio</h4>
-          <p class="text-gray-700 mb-4">Designed and developed this portfolio using modern HTML, CSS, and JavaScript techniques.</p>
-          <a href="#" class="text-blue-600 font-semibold hover:underline">View Code →</a>
+        <div class="project-card">
+          <img src="Project2.png" alt="Project 2" />
+          <h3>Project Two</h3>
+          <p>Brief description of the project goes here.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="max-w-5xl mx-auto py-16 px-6">
-    <h3 class="text-3xl font-bold mb-6">Contact</h3>
-    <p class="mb-4 text-gray-700">Let's connect! Reach out to me via the platforms below:</p>
-    <ul class="space-y-2 text-blue-600">
-      <li>Email: <a href="mailto:subhajitmahantaofficial@gmail.com" class="hover:underline">subhajitmahantaofficial@gmail.com</a></li>
-      <li>GitHub: <a href="https://github.com/subhajit-mahanta" target="_blank" class="hover:underline">subhajit-mahanta</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/subhajitmahanta" target="_blank" class="hover:underline">subhajitmahanta</a></li>
-    </ul>
+  <section id="expertise" class="section">
+    <div class="container">
+      <h2>Expertise</h2>
+      <ul class="skills-list">
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>HTML / CSS / JavaScript</li>
+        <li>React</li>
+        <li>SQL & Databases</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-6 border-t">
-    &copy; 2025 Subhajit Mahanta. All rights reserved.
-  </footer>
+  <section id="contact" class="section alt-bg">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: subhajit@example.com</p>
+      <div class="social-icons">
+        <a href="#"><img src="linkedin.gif" alt="LinkedIn" /></a>
+        <a href="#"><img src="twitter.gif" alt="Twitter" /></a>
+      </div>
+    </div>
+  </section>
 
+  <footer>
+    <div class="container">
+      <p>© 2025 Subhajit Mahanta. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
