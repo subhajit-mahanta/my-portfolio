@@ -59,6 +59,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2rem;
+  position: relative;
 }
 
 .logo {
@@ -67,6 +68,20 @@ nav {
   color: var(--primary);
 }
 
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+/* Desktop nav links */
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -210,17 +225,35 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links,
+  .cta-button {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  #menu-toggle:checked ~ .nav-links,
+  #menu-toggle:checked ~ .cta-button {
+    display: flex;
+  }
+
   .nav-container {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
 
-  .nav-links {
-    flex-direction: column;
+  .nav-links a,
+  .cta-button a {
+    display: inline-block;
     width: 100%;
-    gap: 1rem;
-    padding: 1rem 0;
+    text-align: left;
+    padding-left: 1rem;
   }
 
   .hero-content {
@@ -244,12 +277,5 @@ footer {
 
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-
-  .nav-links a,
-  .cta-button a {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
   }
 }
