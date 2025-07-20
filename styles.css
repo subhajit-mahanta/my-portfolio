@@ -101,32 +101,27 @@ section {
   border-radius: 0.9rem;
 }
 
-/* -------- ROUNDED SKILL ICONS -------- */
+/* Simple Perfect Centering */
 .skill-icon {
   transition: transform 0.24s, filter 0.24s, box-shadow 0.23s;
   filter: grayscale(30%);
-  vertical-align: middle;
-  
-  /* Rounded styling */
   background: #fff;
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   margin: 0 auto 10px auto;
   box-shadow: 0 2px 18px 0 #1976d212;
 }
+
 .skill-icon:hover {
   filter: grayscale(0%);
   transform: scale(1.18);
   box-shadow: 0 4px 22px #40c4ffd5;
   background: #f8f9fa;
 }
-#skills .bi {
-  display: inline-block;
-}
+
 
 /* Skill Badges */
 .badge {
@@ -353,3 +348,26 @@ footer {
     padding: 0.4rem 0.8rem;
   }
 }
+
+/* Performance Optimizations */
+.card.project-card {
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card.project-card * {
+  will-change: transform;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .card.project-card {
+    transition: none;
+  }
+  
+  .card.project-card:hover {
+    transform: none;
+  }
+}
+
