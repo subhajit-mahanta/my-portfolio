@@ -76,7 +76,7 @@ section {
   line-height: 1.87;
 }
 
-/* -------- PROJECTS SECTION -------- */
+/* -------- PROJECTS SECTION WITH ENHANCED ANIMATIONS -------- */
 .card.project-card {
   border: none;
   cursor: pointer;
@@ -140,7 +140,7 @@ section {
   border-radius: 0.9rem;
 }
 
-/* -------- PERFECTLY CENTERED SKILL ICONS -------- */
+/* -------- FIXED - PERFECTLY CENTERED SKILL ICONS -------- */
 .skill-icon {
   font-size: 2rem;
   transition: transform 0.24s, filter 0.24s, box-shadow 0.23s;
@@ -149,8 +149,9 @@ section {
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto 10px auto;
   box-shadow: 0 2px 18px 0 #1976d212;
 }
@@ -162,12 +163,13 @@ section {
   background: #f8f9fa;
 }
 
+/* Ensure Bootstrap Icons are properly centered */
 #skills .bi {
   display: inline-block;
   line-height: 1;
   margin: 0;
   padding: 0;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 /* Individual Skill Colors - Clean Approach */
@@ -413,6 +415,14 @@ footer {
   }
   
   .card.project-card:hover {
+    transform: none;
+  }
+  
+  .skill-icon {
+    transition: none;
+  }
+  
+  .skill-icon:hover {
     transform: none;
   }
 }
