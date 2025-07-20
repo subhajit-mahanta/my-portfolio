@@ -82,16 +82,49 @@ section {
   cursor: pointer;
   transition: transform 0.22s, box-shadow 0.22s, border 0.25s;
 }
+/* Enhanced Project Card Animations */
+.card.project-card {
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+}
+
+.card.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s;
+  z-index: 1;
+}
+
 .card.project-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 0.4rem 1.5rem #1976d219;
-  border: 1.5px solid #1976d2;
+  transform: translateY(-12px) rotateX(5deg) rotateY(5deg) scale(1.05);
+  box-shadow: 
+    0 20px 40px rgba(25, 118, 210, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 2px solid #1976d2;
 }
-.card-img-top {
-  object-fit: cover;
-  height: 175px;
-  border-radius: 0.5rem 0.5rem 0 0;
+
+.card.project-card:hover::before {
+  left: 100%;
 }
+
+.card.project-card:hover .card-body {
+  transform: translateZ(20px);
+}
+
+.card.project-card:hover .card-title {
+  color: #1976d2;
+  transform: translateY(-2px);
+}
+
 
 /* -------- MODALS -------- */
 .modal-header {
