@@ -1,254 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Subhajit Mahanta | Portfolio</title>
-
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-  <!-- Animate.css for entry animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <!-- AOS (Animate On Scroll) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
-  <!-- Your custom CSS -->
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.png" type="image/png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subhajit Mahanta | Portfolio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts - Futuristic Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
-  <!-- Navbar -->
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#home">SM</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+<body>
+    <!-- Futuristic Grid Background -->
+    <div class="grid-background"></div>
+    
+    <!-- Animated Particles Background -->
+    <div class="animated-background">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <!-- Floating Geometric Shapes -->
+        <div class="geometric-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
     </div>
-  </nav>
 
-  <!-- Hero Section with photo -->
-  <section id="home" class="vh-100 d-flex align-items-center text-white">
-    <div class="container text-center">
-      <img src="subhajit.jpg" alt="Subhajit Mahanta" class="profile-pic-large mb-4 shadow animate__animated animate__fadeInDown">
-      <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Subhajit Mahanta</h1>
-      <p class="lead mt-3 animate__animated animate__fadeInUp">
-        Developer | Programmer | Problem Solver
-      </p>
-      <a href="#projects" class="btn btn-light btn-lg mt-4 me-3 animate__animated animate__fadeInLeft">View Projects</a>
-      <a href="Subhajit-Mahanta-Resume.pdf" class="btn btn-outline-light btn-lg mt-4 animate__animated animate__fadeInRight" target="_blank">Download Resume</a>
-    </div>
-  </section>
-
-  <!-- About Section - Professional Version for Graduated Developer -->
-  <section id="about" class="py-5 bg-light" data-aos="fade-up">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="about-description">
-        <p>
-          I am a passionate and results-driven software developer with expertise in full-stack development and modern web technologies. With a strong foundation in computer science principles and hands-on experience in building scalable applications, I specialize in creating efficient, user-friendly solutions that solve real-world problems. My technical journey spans across multiple programming languages and frameworks, with a keen interest in emerging technologies and best practices. I thrive in collaborative environments and am committed to continuous learning and innovation. Whether working on frontend interfaces or backend systems, I bring attention to detail and a problem-solving mindset to every project. I'm always excited to take on new challenges and contribute to meaningful technology solutions.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-5" data-aos="fade-up">
-    <div class="container">
-      <h2 class="mb-5 text-center">Projects</h2>
-      <div class="row g-4">
-        <!-- Project Card 1 -->
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="card h-100 shadow-sm project-card animate__animated animate__fadeInUp" data-bs-toggle="modal" data-bs-target="#project1Modal">
-            <img src="project1.jpg" class="card-img-top" alt="Weather App">
-            <div class="card-body">
-              <h5 class="card-title">Raccon Library</h5>
-              <p class="card-text">The best Library in the town is here!</p>
+    <!-- Holographic Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top futuristic-nav">
+        <div class="container">
+            <div class="nav-glow"></div>
+            <button class="navbar-toggler futuristic-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link futuristic-link" href="#home">
+                            <span class="link-text">Home</span>
+                            <span class="link-glow"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link futuristic-link" href="#about">
+                            <span class="link-text">About</span>
+                            <span class="link-glow"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link futuristic-link" href="#skills">
+                            <span class="link-text">Skills</span>
+                            <span class="link-glow"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link futuristic-link" href="#projects">
+                            <span class="link-text">Projects</span>
+                            <span class="link-glow"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link futuristic-link" href="#contact">
+                            <span class="link-text">Contact</span>
+                            <span class="link-glow"></span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-        <!-- Project Card 2 -->
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="card h-100 shadow-sm project-card animate__animated animate__fadeInUp" data-bs-toggle="modal" data-bs-target="#project2Modal">
-            <img src="project2.jpg" class="card-img-top" alt="Personal Blog">
-            <div class="card-body">
-              <h5 class="card-title">Weather App</h5>
-              <p class="card-text">Real-time weather info using OpenWeatherMap API and Bootstrap UI.</p>
+    </nav>
+
+    <!-- Enhanced Futuristic Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="holographic-frame">
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center min-vh-100">
+                    <div class="col-lg-8 col-md-10 col-sm-12">
+                        <div class="hero-content text-center">
+                            <div class="profile-container">
+                                <div class="profile-ring"></div>
+                                <div class="profile-ring-2"></div>
+                                <img src="subhajit.jpg" alt="Profile" class="profile-img">
+                            </div>
+                            
+                            <div class="typing-container">
+                                <h1 class="display-4 fw-bold mb-3 hero-title">
+                                    <span class="gradient-text" id="heroName">Subhajit Mahanta</span>
+                                </h1>
+                            </div>
+                            
+                            <h2 class="h4 hero-subtitle mb-4">
+                                <span class="neon-text">Full Stack Developer</span>
+                                <span class="divider">|</span>
+                                <span class="hologram-text">Problem Solver</span>
+                            </h2>
+                            <p class="lead mb-4 hero-description">
+                                Passionate developer skilled in modern web technologies, creating 
+                                <span class="highlight-text">innovative solutions</span> with clean, efficient code.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#projects" class="btn futuristic-btn futuristic-btn-primary btn-lg me-3">
+                                    <span class="btn-text">View Projects</span>
+                                </a>
+                                <a href="resume.pdf" class="btn futuristic-btn futuristic-btn-outline btn-lg" download>
+                                    <span class="btn-text">Download Resume</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <!-- Add more projects as needed -->
-      </div>
-    </div>
-  </section>
+        <!-- Scanning Lines Effect -->
+        <div class="scan-lines"></div>
+    </section>
 
-  <!-- Project Modals -->
-  <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="project1ModalLabel">Raccon Library</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>
-            This project displays live weather for any city using OpenWeatherMap API. Built using Bootstrap, HTML, CSS, and JavaScript for a slick and responsive UI.
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="#" class="btn btn-primary" target="_blank">View Live</a>
-          <a href="#" class="btn btn-outline-secondary" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="project2ModalLabel">Weather App</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>
-            A blogging platform with admin tools and markdown support. Authentication, responsive design, and comments powered by Django and Bootstrap.
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="#" class="btn btn-primary" target="_blank">View Live</a>
-          <a href="#" class="btn btn-outline-secondary" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Add more modals as needed -->
-
-  <!-- Skills: Fixed Icons with Perfect Centering -->
-  <section id="skills" class="py-5 bg-light" data-aos="fade-up">
-    <div class="container">
-      <h2 class="mb-4 text-center">Technical Skills</h2>
-      <div class="row text-center justify-content-center g-4">
-        <!-- Row 1: Core Programming -->
-        <div class="col-6 col-md-3 col-lg-2">
-          <i class="bi bi-cup-hot skill-icon skill-java"></i>
-          <div>Java</div>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <i class="bi bi-filetype-js skill-icon skill-javascript"></i>
-          <div>JavaScript</div>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <i class="bi bi-filetype-html skill-icon skill-html"></i>
-          <div>HTML</div>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <i class="bi bi-filetype-css skill-icon skill-css"></i>
-          <div>CSS</div>
-        </div>
-        
-        <!-- Row 2: Frameworks & Tools -->
-        <div class="col-6 col-md-3 col-lg-2">
-          <i class="bi bi-code-square skill-icon skill-react"></i>
-          <div>React</div>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <i class="bi bi-bootstrap-fill skill-icon skill-bootstrap"></i>
-          <div>Bootstrap</div>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <i class="bi bi-database skill-icon skill-sql"></i>
-          <div>SQL</div>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <i class="bi bi-git skill-icon skill-git"></i>
-          <div>Git</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section with Floating Action Email Copy -->
-  <section id="contact" class="py-5" data-aos="fade-up">
-    <div class="container">
-      <h2 class="mb-4 text-center">Contact Me</h2>
-      
-      <!-- Floating Action Email Copy -->
-      <div class="floating-email-wrapper">
-        <div class="email-badge">
-          <span class="badge-text">Email</span>
-        </div>
-        <div class="floating-email-container">
-          <div class="email-chip">
-            <span class="email-value" id="floatingEmailText">subhajitmahantaofficial@gmail.com</span>
-            <div class="action-buttons">
-              <button class="action-btn copy-btn" onclick="copyFloatingEmail()" id="floatingCopyBtn">
-                <i class="bi bi-copy"></i>
-              </button>
-              <a href="mailto:subhajitmahantaofficial@gmail.com" class="action-btn mail-btn">
-                <i class="bi bi-envelope"></i>
-              </a>
+    <!-- About Section -->
+    <section id="about" class="py-5 futuristic-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="section-title">
+                            <span class="title-line"></span>
+                            About Me
+                            <span class="title-line"></span>
+                        </h2>
+                        <div class="title-glow"></div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="glass-panel about-content">
+                                <h3 class="mb-3 gradient-text">Hello! I'm a Developer</h3>
+                                <p class="text-content">I'm a passionate full-stack developer with expertise in modern web technologies. I love creating efficient, scalable solutions that solve real-world problems.</p>
+                                <p class="text-content">My journey in programming has led me to work with various technologies, from backend development with Java and SQL to frontend creation with React and Bootstrap.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="stats-container">
+                                <div class="stat-item glass-panel">
+                                    <div class="stat-number">
+                                        <span class="counter" data-target="5">0</span>+
+                                    </div>
+                                    <p class="stat-label">Projects Completed</p>
+                                    <div class="stat-bar"></div>
+                                </div>
+                                <div class="stat-item glass-panel">
+                                    <div class="stat-number">
+                                        <span class="counter" data-target="1">0</span>+
+                                    </div>
+                                    <p class="stat-label">Years Experience</p>
+                                    <div class="stat-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="floating-toast" id="floatingToast">
-          ✨ Copied!
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 futuristic-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="section-title">
+                            <span class="title-line"></span>
+                            Technical Skills
+                            <span class="title-line"></span>
+                        </h2>
+                        <div class="title-glow"></div>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item futuristic-card">
+                            <div class="skill-icon skill-java">
+                                <i class="bi bi-cup-hot"></i>
+                            </div>
+                            <h5 class="skill-name">Java</h5>
+                            <div class="skill-progress-container">
+                                <div class="skill-progress">
+                                    <div class="progress-fill" style="--progress: 80%"></div>
+                                    <span class="progress-text">80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item futuristic-card">
+                            <div class="skill-icon skill-js">
+                                <i class="bi bi-braces"></i>
+                            </div>
+                            <h5 class="skill-name">JavaScript</h5>
+                            <div class="skill-progress-container">
+                                <div class="skill-progress">
+                                    <div class="progress-fill" style="--progress: 60%"></div>
+                                    <span class="progress-text">60%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item futuristic-card">
+                            <div class="skill-icon skill-react">
+                                <i class="bi bi-arrow-repeat"></i>
+                            </div>
+                            <h5 class="skill-name">React</h5>
+                            <div class="skill-progress-container">
+                                <div class="skill-progress">
+                                    <div class="progress-fill" style="--progress: 40%"></div>
+                                    <span class="progress-text">40%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item futuristic-card">
+                            <div class="skill-icon skill-bootstrap">
+                                <i class="bi bi-bootstrap"></i>
+                            </div>
+                            <h5 class="skill-name">Bootstrap</h5>
+                            <div class="skill-progress-container">
+                                <div class="skill-progress">
+                                    <div class="progress-fill" style="--progress: 35%"></div>
+                                    <span class="progress-text">35%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item futuristic-card">
+                            <div class="skill-icon skill-html">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <h5 class="skill-name">HTML/CSS</h5>
+                            <div class="skill-progress-container">
+                                <div class="skill-progress">
+                                    <div class="progress-fill" style="--progress: 85%"></div>
+                                    <span class="progress-text">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item futuristic-card">
+                            <div class="skill-icon skill-sql">
+                                <i class="bi bi-database"></i>
+                            </div>
+                            <h5 class="skill-name">SQL</h5>
+                            <div class="skill-progress-container">
+                                <div class="skill-progress">
+                                    <div class="progress-fill" style="--progress: 70%"></div>
+                                    <span class="progress-text">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item futuristic-card">
+                            <div class="skill-icon skill-git">
+                                <i class="bi bi-git"></i>
+                            </div>
+                            <h5 class="skill-name">Git</h5>
+                            <div class="skill-progress-container">
+                                <div class="skill-progress">
+                                    <div class="progress-fill" style="--progress: 55%"></div>
+                                    <span class="progress-text">55%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      
-      <!-- Contact Form -->
-      <form id="contactForm" class="mx-auto mt-5" style="max-width:480px;" novalidate>
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Your Name" required>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 futuristic-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="section-title">
+                            <span class="title-line"></span>
+                            Featured Projects
+                            <span class="title-line"></span>
+                        </h2>
+                        <div class="title-glow"></div>
+                    </div>
+                    <div class="projects-grid">
+                        <div class="project-card futuristic-card" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                            <div class="project-image-container">
+                                <img src="project1.jpg" class="project-image" alt="Project 1">
+                                <div class="project-overlay">
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h5 class="project-title">Raccon Library</h5>
+                                <p class="project-description">Full-stack web application built with React and Java Spring Boot</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge tech-react">React</span>
+                                    <span class="tech-badge tech-java">Java</span>
+                                    <span class="tech-badge tech-sql">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card futuristic-card" data-bs-toggle="modal" data-bs-target="#project2Modal">
+                            <div class="project-image-container">
+                                <img src="project2.jpg" class="project-image" alt="Project 2">
+                                <div class="project-overlay">
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h5 class="project-title">Weather App</h5>
+                                <p class="project-description">Responsive web app with real-time updates using OpenWeather API</p>
+                                <div class="project-tech">
+                                    <span class="tech-badge tech-js">JavaScript</span>
+                                    <span class="tech-badge tech-bootstrap">Bootstrap</span>
+                                    <span class="tech-badge tech-css">CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Your Email" required>
+    </section>
+
+    <!-- Enhanced Contact Section -->
+    <section id="contact" class="py-5 futuristic-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="section-title">
+                            <span class="title-line"></span>
+                            Get In Touch
+                            <span class="title-line"></span>
+                        </h2>
+                        <div class="title-glow"></div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="contact-info glass-panel equal-height-box">
+                                <h4 class="mb-4 gradient-text">Let's Connect</h4>
+                                
+                                <!-- Email Contact Item -->
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </div>
+                                    <div class="contact-details flex-grow-1">
+                                        <strong>Email</strong>
+                                        <p class="contact-text">myemailcomingsoon@gmail.com</p>
+                                        <div class="email-buttons">
+                                            <button class="btn futuristic-btn-small" onclick="copyEmail()" id="copyEmailBtn">
+                                                <i class="bi bi-copy"></i> Copy
+                                            </button>
+                                            <a href="mailto:subhajitmahantaofficial@gmail.com" class="btn futuristic-btn-small futuristic-btn-primary">
+                                                <i class="bi bi-envelope"></i> Mail
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Phone Contact Item -->
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="bi bi-telephone-fill"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <strong>Phone</strong>
+                                        <p class="contact-text">+91 12345 67890</p>
+                                        <p class="contact-text-small">Available Mon-Fri, 9 AM - 6 PM IST</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Location Contact Item -->
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <strong>Location</strong>
+                                        <p class="contact-text">West Bengal</p>
+                                        <p class="contact-text-small">India</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Social Links -->
+                                <div class="social-links mt-4">
+                                    <a href="https://linkedin.com/in/subhajitmahanta" class="social-btn">
+                                        <i class="bi bi-linkedin"></i>
+                                        <span>LinkedIn</span>
+                                        <div class="social-glow"></div>
+                                    </a>
+                                    <a href="https://github.com/subhajit-mahanta" class="social-btn">
+                                        <i class="bi bi-github"></i>
+                                        <span>GitHub</span>
+                                        <div class="social-glow"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <form id="contactForm" class="contact-form glass-panel equal-height-box">
+                                <h4 class="mb-4 gradient-text">Send Message</h4>
+                                <div class="form-group mb-3">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <div class="input-container">
+                                        <input type="text" class="form-control futuristic-input" id="name" placeholder="Enter your full name" required>
+                                        <div class="input-glow"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <div class="input-container">
+                                        <input type="email" class="form-control futuristic-input" id="email" placeholder="your.email@example.com" required>
+                                        <div class="input-glow"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <div class="input-container">
+                                        <input type="text" class="form-control futuristic-input" id="subject" placeholder="Project inquiry, collaboration, etc.">
+                                        <div class="input-glow"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <div class="input-container">
+                                        <textarea class="form-control futuristic-input" id="message" rows="5" placeholder="Tell me about your project or how I can help you..." required></textarea>
+                                        <div class="input-glow"></div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn futuristic-btn futuristic-btn-primary btn-lg w-100">
+                                    <span class="btn-text">Send Message</span>
+                                </button>
+                                <p class="form-note mt-3">
+                                    <i class="bi bi-shield-check"></i>
+                                    Your information is secure and will never be shared.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+    </section>
+
+    <!-- Footer -->
+    <footer class="futuristic-footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="footer-content glass-panel">
+                        <p class="mb-0 gradient-text">&copy; 2025 Your Name. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Send</button>
-      </form>
-      
-      <!-- Social Links -->
-      <div class="text-center mt-4 social-links">
-        <a href="https://github.com/subhajit-mahanta" target="_blank" class="me-3">
-          <i class="bi bi-github" style="font-size:2rem;"></i>
-        </a>
-        <a href="https://linkedin.com/in/subhajitmahanta" target="_blank">
-          <i class="bi bi-linkedin" style="font-size:2rem; color:#0e76a8;"></i>
-        </a>
-      </div>
+    </footer>
+
+    <!-- Futuristic Modals -->
+    <!-- Project 1 Modal -->
+    <div class="modal fade futuristic-modal" id="project1Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content glass-panel">
+                <div class="modal-header">
+                    <h5 class="modal-title gradient-text">E-Commerce Platform</h5>
+                    <button type="button" class="btn-close futuristic-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="project1.jpg" class="img-fluid mb-4 project-detail-img" alt="Project Details">
+                    <p>Detailed description of your e-commerce platform project. Include technologies used, challenges overcome, and key features implemented.</p>
+                    <h6 class="gradient-text">Technologies Used:</h6>
+                    <ul>
+                        <li>Frontend: React, Bootstrap, CSS</li>
+                        <li>Backend: Java Spring Boot</li>
+                        <li>Database: MySQL</li>
+                        <li>Version Control: Git</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn futuristic-btn futuristic-btn-primary">View Live</a>
+                    <a href="#" class="btn futuristic-btn futuristic-btn-outline">View Code</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="py-3 bg-dark text-white text-center">
-    <small>&copy; 2025 Subhajit Mahanta. All rights reserved.</small>
-  </footer>
+    <!-- Project 2 Modal -->
+    <div class="modal fade futuristic-modal" id="project2Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content glass-panel">
+                <div class="modal-header">
+                    <h5 class="modal-title gradient-text">Task Management App</h5>
+                    <button type="button" class="btn-close futuristic-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="project2.jpg" class="img-fluid mb-4 project-detail-img" alt="Project Details">
+                    <p>Comprehensive task management application with real-time updates, user authentication, and responsive design.</p>
+                    <h6 class="gradient-text">Technologies Used:</h6>
+                    <ul>
+                        <li>Frontend: JavaScript, HTML5, CSS3</li>
+                        <li>Framework: Bootstrap 5</li>
+                        <li>Features: Real-time updates, Local storage</li>
+                        <li>Version Control: Git</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn futuristic-btn futuristic-btn-primary">View Live</a>
+                    <a href="#" class="btn futuristic-btn futuristic-btn-outline">View Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS (for scroll animations) -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 900,
-      once: true
-    });
-  </script>
-  <!-- Custom JS -->
-  <script src="scripts.js"></script>
+    <!-- Project 3 Modal -->
+    <div class="modal fade futuristic-modal" id="project3Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content glass-panel">
+                <div class="modal-header">
+                    <h5 class="modal-title gradient-text">Portfolio Website</h5>
+                    <button type="button" class="btn-close futuristic-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="project3.jpg" class="img-fluid mb-4 project-detail-img" alt="Project Details">
+                    <p>Modern, futuristic portfolio website showcasing projects and skills with advanced animations and beautiful design.</p>
+                    <h6 class="gradient-text">Technologies Used:</h6>
+                    <ul>
+                        <li>Frontend: HTML5, CSS3, JavaScript</li>
+                        <li>Framework: Bootstrap 5</li>
+                        <li>Features: Futuristic design, Contact form</li>
+                        <li>Version Control: Git</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn futuristic-btn futuristic-btn-primary">View Live</a>
+                    <a href="#" class="btn futuristic-btn futuristic-btn-outline">View Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
 </body>
 </html>
