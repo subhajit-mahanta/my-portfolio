@@ -1,209 +1,369 @@
-// scripts.js -- Complete Modern CS Portfolio JavaScript
-
-// -------- SMOOTH NAVIGATION --------
-// Smooth scroll for nav links
-document.querySelectorAll('a.nav-link').forEach(link => {
-  link.addEventListener('click', function (e) {
-    if (this.hash && document.querySelector(this.hash)) {
-      e.preventDefault();
-      document.querySelector(this.hash).scrollIntoView({ behavior: "smooth" });
-
-      // Close mobile nav if open
-      const navCollapse = document.querySelector('.navbar-collapse.show');
-      if (navCollapse) {
-        new bootstrap.Collapse(navCollapse).toggle();
-      }
-    }
-  });
+// Enhanced smooth scrolling with easing
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
 
-// -------- CONTACT FORM VALIDATION --------
-// Contact form validation and submission
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (form.checkValidity()) {
-        alert('Thank you! Your message has been sent.');
-        form.reset();
-        form.classList.remove('was-validated');
-      } else {
-        form.classList.add('was-validated');
-      }
-    });
-  }
-});
-
-// -------- FLOATING ACTION EMAIL COPY FUNCTIONALITY --------
-// Main function for floating email copy
-function copyFloatingEmail() {
-  const emailText = document.getElementById('floatingEmailText').textContent;
-  const btn = document.getElementById('floatingCopyBtn');
-  const toast = document.getElementById('floatingToast');
-  
-  copyEmailToClipboard(emailText, btn, toast);
-}
-
-// Enhanced copy function with modern clipboard API
-function copyEmailToClipboard(email, btn, customToast = null) {
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(email).then(() => {
-      showModernFeedback(btn, customToast);
-    }).catch(() => {
-      fallbackCopy(email, btn, customToast);
-    });
-  } else {
-    fallbackCopy(email, btn, customToast);
-  }
-}
-
-// Fallback copy method for older browsers
-function fallbackCopy(text, btn, toast) {
-  const textArea = document.createElement('textarea');
-  textArea.value = text;
-  textArea.style.position = 'fixed';
-  textArea.style.left = '-9999px';
-  textArea.style.top = '-9999px';
-  
-  document.body.appendChild(textArea);
-  textArea.select();
-  
-  try {
-    const successful = document.execCommand('copy');
-    if (successful) {
-      showModernFeedback(btn, toast);
+// Enhanced navbar effects
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.futuristic-nav');
+    const scrolled = window.scrollY > 100;
+    
+    if (scrolled) {
+        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+        navbar.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.4)';
     } else {
-      console.error('Fallback: Copying text command was unsuccessful');
+        navbar.style.background = 'rgba(10, 10, 10, 0.9)';
+        navbar.style.boxShadow = '0 0 20px rgba(0, 255, 255, 0.3)';
     }
-  } catch (err) {
-    console.error('Fallback: Unable to copy', err);
-  }
-  
-  document.body.removeChild(textArea);
-}
-
-// Show modern copy feedback with animations
-function showModernFeedback(btn, toast) {
-  const originalContent = btn.innerHTML;
-  const originalBg = btn.style.background;
-  
-  // Update button to show success state
-  btn.innerHTML = '<i class="bi bi-check2"></i>';
-  btn.style.background = '#10b981';
-  
-  // Show floating toast
-  if (toast) {
-    toast.classList.add('show');
-  }
-  
-  // Reset everything after 2.5 seconds
-  setTimeout(() => {
-    btn.innerHTML = originalContent;
-    btn.style.background = originalBg || '';
-    if (toast) {
-      toast.classList.remove('show');
-    }
-  }, 2500);
-}
-
-// -------- UTILITY FUNCTIONS --------
-// Debounce function for performance optimization
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-// Check if element is in viewport (for future enhancements)
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-// -------- PERFORMANCE OPTIMIZATIONS --------
-// Optimize scroll performance
-let ticking = false;
-function updateOnScroll() {
-  // Add any scroll-based functionality here
-  ticking = false;
-}
-
-function requestTick() {
-  if (!ticking) {
-    requestAnimationFrame(updateOnScroll);
-    ticking = true;
-  }
-}
-
-// Optimized scroll listener
-window.addEventListener('scroll', requestTick, { passive: true });
-
-// -------- ACCESSIBILITY ENHANCEMENTS --------
-// Keyboard navigation support
-document.addEventListener('keydown', function(e) {
-  // Support Enter key for copy button
-  if (e.key === 'Enter' && e.target.classList.contains('copy-btn')) {
-    e.target.click();
-  }
-  
-  // Support Escape key to close any open modals
-  if (e.key === 'Escape') {
-    const openModal = document.querySelector('.modal.show');
-    if (openModal) {
-      const closeBtn = openModal.querySelector('.btn-close');
-      if (closeBtn) closeBtn.click();
-    }
-  }
 });
 
-// -------- LOADING OPTIMIZATIONS --------
-// Preload critical resources
+// Active navigation with glow effect
+window.addEventListener('scroll', function() {
+    let current = '';
+    const sections = document.querySelectorAll('section');
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    document.querySelectorAll('.futuristic-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+            link.style.boxShadow = 'inset 0 0 20px rgba(0, 255, 255, 0.3)';
+        } else {
+            link.style.boxShadow = '';
+        }
+    });
+});
+
+// Typing animation for hero
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.textContent = '';
+    
+    const timer = setInterval(() => {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(timer);
+        }
+    }, speed);
+}
+
+// Counter animation
+function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current);
+            }
+        }, 16);
+    });
+}
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            
+            // Trigger counter animation
+            if (entry.target.querySelector('.counter')) {
+                animateCounters();
+            }
+            
+            // Trigger progress bar animation
+            if (entry.target.classList.contains('skill-item')) {
+                const progressFill = entry.target.querySelector('.progress-fill');
+                if (progressFill) {
+                    setTimeout(() => {
+                        progressFill.style.width = progressFill.style.getPropertyValue('--progress');
+                    }, 200);
+                }
+            }
+        }
+    });
+}, observerOptions);
+
+// Copy email functionality with enhanced feedback
+function copyEmail() {
+    const email = 'subhajitmahantaofficial@gmail.com';
+    const copyBtn = document.getElementById('copyEmailBtn');
+    
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+            showCopySuccess(copyBtn);
+        }).catch(err => {
+            fallbackCopyEmail(email, copyBtn);
+        });
+    } else {
+        fallbackCopyEmail(email, copyBtn);
+    }
+}
+
+function fallbackCopyEmail(email, button) {
+    const textArea = document.createElement('textarea');
+    textArea.value = email;
+    textArea.style.position = 'fixed';
+    textArea.style.opacity = '0';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+        showCopySuccess(button);
+    } catch (err) {
+        console.error('Failed to copy email:', err);
+        alert('Email copied: ' + email);
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+function showCopySuccess(button) {
+    const originalHTML = button.innerHTML;
+    const originalClass = button.className;
+    
+    button.innerHTML = '<i class="bi bi-check2"></i> Copied!';
+    button.style.background = 'linear-gradient(135deg, #00ff88, #00d4ff)';
+    button.style.color = '#0a0a0a';
+    button.style.transform = 'scale(1.05)';
+    button.style.boxShadow = '0 0 20px rgba(0, 255, 136, 0.5)';
+    
+    setTimeout(() => {
+        button.innerHTML = originalHTML;
+        button.className = originalClass;
+        button.style.background = '';
+        button.style.color = '';
+        button.style.transform = '';
+        button.style.boxShadow = '';
+    }, 2000);
+}
+
+// Enhanced contact form handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    
+    if (!name || !email || !message) {
+        showNotification('Please fill in all required fields.', 'error');
+        return;
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        showNotification('Please enter a valid email address.', 'error');
+        return;
+    }
+    
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    
+    submitBtn.innerHTML = '<span class="btn-text">Sending...</span><div class="loading"></div>';
+    submitBtn.disabled = true;
+    submitBtn.classList.add('loading');
+    
+    setTimeout(() => {
+        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+        this.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('loading');
+    }, 2000);
+});
+
+// Notification system
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 2rem;
+        background: ${type === 'error' ? 'rgba(255, 71, 87, 0.9)' : 'rgba(0, 212, 170, 0.9)'};
+        color: white;
+        border-radius: 8px;
+        z-index: 10000;
+        animation: slideIn 0.3s ease;
+        backdrop-filter: blur(20px);
+        border: 1px solid ${type === 'error' ? 'rgba(255, 71, 87, 0.3)' : 'rgba(0, 212, 170, 0.3)'};
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    `;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 3000);
+}
+
+// Add slide animations to CSS
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+    }
+`;
+document.head.appendChild(style);
+
+// Dynamic particle generation
+function createDynamicParticles() {
+    const background = document.querySelector('.animated-background');
+    if (!background) return;
+
+    setInterval(() => {
+        const particle = document.createElement('div');
+        particle.className = 'dynamic-particle';
+        particle.style.cssText = `
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00ffff;
+            border-radius: 50%;
+            left: ${Math.random() * 100}%;
+            top: 100%;
+            box-shadow: 0 0 6px #00ffff;
+            animation: floatUp 4s linear forwards;
+            z-index: 1;
+        `;
+        
+        background.appendChild(particle);
+        
+        setTimeout(() => {
+            if (particle.parentNode) {
+                particle.parentNode.removeChild(particle);
+            }
+        }, 4000);
+    }, 500);
+    
+    // Add float animation
+    const floatStyle = document.createElement('style');
+    floatStyle.textContent = `
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(floatStyle);
+}
+
+// Enhanced modal effects
+document.querySelectorAll('[data-bs-toggle="modal"]').forEach(trigger => {
+    trigger.addEventListener('click', function() {
+        const targetModal = document.querySelector(this.getAttribute('data-bs-target'));
+        if (targetModal) {
+            setTimeout(() => {
+                targetModal.style.backdropFilter = 'blur(20px)';
+            }, 150);
+        }
+    });
+});
+
+// Initialize everything
 document.addEventListener('DOMContentLoaded', function() {
-  // Preload resume PDF if it exists
-  const resumeLink = document.querySelector('a[href="resume.pdf"]');
-  if (resumeLink) {
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = 'resume.pdf';
-    document.head.appendChild(link);
-  }
-  
-  // Initialize any components that need DOM ready
-  console.log('Portfolio loaded successfully!');
+    // Add animate-in class to all animatable elements
+    const animatableElements = document.querySelectorAll('.futuristic-card, .glass-panel, .stat-item');
+    animatableElements.forEach(el => {
+        el.classList.add('animate-in');
+        observer.observe(el);
+    });
+    
+    // Initialize typing animation
+    const heroName = document.getElementById('heroName');
+    if (heroName) {
+        const originalText = heroName.textContent;
+        typeWriter(heroName, originalText, 100);
+    }
+    
+    // Start dynamic particles
+    createDynamicParticles();
+    
+    // Initialize progress bars
+    setTimeout(() => {
+        document.querySelectorAll('.progress-fill').forEach(bar => {
+            bar.style.width = '0%';
+        });
+    }, 100);
 });
 
-// -------- BROWSER COMPATIBILITY --------
-// Polyfill for older browsers
-if (!Element.prototype.closest) {
-  Element.prototype.closest = function(s) {
-    var el = this;
-    do {
-      if (Element.prototype.matches.call(el, s)) return el;
-      el = el.parentElement || el.parentNode;
-    } while (el !== null && el.nodeType === 1);
-    return null;
-  };
+// Debounce function for performance
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
 }
 
-// -------- ERROR HANDLING --------
-// Global error handler for debugging
-window.addEventListener('error', function(e) {
-  console.error('Portfolio Error:', e.error);
-});
+// Performance optimizations
+const debouncedScroll = debounce(() => {
+    // Any scroll-heavy operations
+}, 16);
 
-// Handle unhandled promise rejections
-window.addEventListener('unhandledrejection', function(e) {
-  console.error('Unhandled Promise Rejection:', e.reason);
+window.addEventListener('scroll', debouncedScroll);
+
+// Add loading effect to page
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+    
+    // Remove any loading overlays
+    const loader = document.querySelector('.page-loader');
+    if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }
 });
