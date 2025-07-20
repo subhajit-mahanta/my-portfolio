@@ -80,16 +80,13 @@ section {
 .card.project-card {
   border: none;
   cursor: pointer;
-  transition: transform 0.22s, box-shadow 0.22s, border 0.25s;
-}
-/* Enhanced Project Card Animations */
-.card.project-card {
-  border: none;
-  cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .card.project-card::before {
@@ -125,6 +122,15 @@ section {
   transform: translateY(-2px);
 }
 
+.card.project-card * {
+  will-change: transform;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 175px;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
 
 /* -------- MODALS -------- */
 .modal-header {
@@ -134,7 +140,7 @@ section {
   border-radius: 0.9rem;
 }
 
-/* Simple Perfect Centering */
+/* -------- PERFECTLY CENTERED SKILL ICONS -------- */
 .skill-icon {
   transition: transform 0.24s, filter 0.24s, box-shadow 0.23s;
   filter: grayscale(30%);
@@ -155,6 +161,13 @@ section {
   background: #f8f9fa;
 }
 
+#skills .bi {
+  display: inline-block;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
 
 /* Skill Badges */
 .badge {
@@ -382,18 +395,7 @@ footer {
   }
 }
 
-/* Performance Optimizations */
-.card.project-card {
-  will-change: transform, box-shadow;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.card.project-card * {
-  will-change: transform;
-}
-
-/* Reduce motion for accessibility */
+/* Accessibility - Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   .card.project-card {
     transition: none;
@@ -403,4 +405,3 @@ footer {
     transform: none;
   }
 }
-
