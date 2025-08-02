@@ -1,4 +1,3 @@
-/* Root Variables - Futuristic Color Palette */
 :root {
     --primary-color: #00ffff;
     --secondary-color: #ff6b35;
@@ -18,7 +17,7 @@
     --shadow-glow: 0 0 40px rgba(0, 255, 255, 0.2);
 }
 
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +36,7 @@ body {
     position: relative;
 }
 
-/* Futuristic Grid Background */
+
 .grid-background {
     position: fixed;
     top: 0;
@@ -57,7 +56,7 @@ body {
     100% { transform: translate(50px, 50px); }
 }
 
-/* Enhanced Animated Background */
+
 .animated-background {
     position: fixed;
     top: 0;
@@ -70,7 +69,7 @@ body {
                 radial-gradient(circle at 50% 50%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
 }
 
-/* Geometric Shapes */
+
 .geometric-shapes {
     position: absolute;
     width: 100%;
@@ -125,7 +124,7 @@ body {
     50% { transform: translateY(-20px) rotate(180deg); opacity: 0.7; }
 }
 
-/* Enhanced Particles */
+
 .particles {
     position: absolute;
     width: 100%;
@@ -155,7 +154,7 @@ body {
     100% { transform: translateY(-10vh) scale(1); opacity: 0; }
 }
 
-/* Futuristic Navigation */
+
 .futuristic-nav {
     background: rgba(10, 10, 10, 0.9) !important;
     backdrop-filter: blur(20px);
@@ -234,7 +233,7 @@ body {
     box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
-/* Hero Section - FIXED FOR SINGLE LINE NAME */
+
 .hero-section {
     min-height: 100vh;
     position: relative;
@@ -281,7 +280,7 @@ body {
     width: 100%;
 }
 
-/* Enhanced Hero Content Wrapper - OPTIMIZED FOR SINGLE LINE */
+
 .hero-content {
     width: 100%;
     max-width: 800px;
@@ -296,16 +295,16 @@ body {
     justify-content: center;
 }
 
-/* Profile Container - ENHANCED SPACING FOR SINGLE LINE NAME */
+
 .profile-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3rem; /* Increased spacing for better photo visibility */
+    margin-bottom: 3rem; 
     margin-top: 0;
     z-index: 10;
-    padding: 1rem; /* Added padding for breathing room */
+    padding: 1rem; 
 }
 
 .profile-ring,
@@ -349,24 +348,24 @@ body {
     filter: brightness(1.1) contrast(1.1);
 }
 
-/* Hero Title - SINGLE LINE OPTIMIZED */
+
 .hero-title {
     font-family: 'Orbitron', monospace;
     font-weight: 900;
-    font-size: 2.8rem; /* Reduced for single line fit */
+    font-size: 2.8rem; 
     text-transform: uppercase;
-    letter-spacing: 1px; /* Reduced letter spacing */
+    letter-spacing: 1px; 
     margin-bottom: 1.5rem;
     margin-top: 0;
     position: relative;
     z-index: 5;
-    white-space: nowrap; /* Prevents line breaking */
-    overflow: visible; /* Allow text to extend if needed */
+    white-space: nowrap;
+    overflow: visible; 
     width: 100%;
     text-align: center;
 }
 
-/* Hero Subtitle - PROPER SPACING */
+
 .hero-subtitle {
     font-family: 'Orbitron', monospace;
     text-transform: uppercase;
@@ -377,7 +376,7 @@ body {
     z-index: 5;
 }
 
-/* Hero Description - PROPER SPACING */
+
 .hero-description {
     margin-bottom: 2rem;
     margin-top: 0;
@@ -385,10 +384,10 @@ body {
     z-index: 5;
 }
 
-/* Responsive Typography - SINGLE LINE OPTIMIZED */
+
 @media (min-width: 1200px) {
     .hero-title {
-        font-size: 3.2rem; /* Slightly larger on big screens */
+        font-size: 3.2rem;
         letter-spacing: 1.5px;
     }
     
@@ -403,7 +402,7 @@ body {
     }
     
     .profile-container {
-        margin-bottom: 4rem; /* More space on large screens */
+        margin-bottom: 4rem; 
         padding: 2rem;
     }
 }
@@ -459,7 +458,7 @@ body {
     text-shadow: 0 0 5px var(--accent-color);
 }
 
-/* Perfect Button Centering */
+
 .hero-buttons {
     display: flex;
     justify-content: center;
@@ -500,7 +499,7 @@ body {
     100% { transform: translateY(4px); }
 }
 
-/* Glass Panel Effect */
+
 .glass-panel {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
@@ -528,7 +527,7 @@ body {
     50% { left: 100%; }
 }
 
-/* Section Headers */
+
 .section-header {
     position: relative;
     margin-bottom: 4rem;
@@ -580,7 +579,7 @@ body {
     opacity: 0.5;
 }
 
-/* Futuristic Buttons */
+
 .futuristic-btn {
     position: relative;
     padding: 1rem 2rem;
@@ -624,7 +623,7 @@ body {
     color: #0a0a0a;
 }
 
-/* Skills Grid */
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -722,7 +721,7 @@ body {
     font-size: 0.875rem;
 }
 
-/* Projects Grid */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -817,7 +816,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Enhanced Contact Section - Equal Sized Boxes */
+
 #contact .container {
     max-width: 1400px;
 }
@@ -827,7 +826,7 @@ body {
     flex: 0 0 100%;
 }
 
-/* Equal Height Boxes */
+
 .equal-height-box {
     min-height: 600px;
     display: flex;
@@ -843,7 +842,7 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Info Box Styling */
+
 .contact-info.equal-height-box {
     justify-content: flex-start;
 }
@@ -854,7 +853,7 @@ body {
     font-size: 1.5rem;
 }
 
-/* Contact Form Box Styling */
+
 .contact-form.equal-height-box {
     justify-content: flex-start;
 }
@@ -865,7 +864,7 @@ body {
     font-size: 1.5rem;
 }
 
-/* Enhanced Contact Items */
+
 .contact-item {
     display: flex;
     align-items: flex-start;
@@ -900,7 +899,7 @@ body {
     transform: translateX(5px);
 }
 
-/* Contact Icons */
+
 .contact-item .contact-icon {
     width: 60px;
     height: 60px;
@@ -918,7 +917,7 @@ body {
     flex-shrink: 0;
 }
 
-/* Individual Gradients */
+
 .contact-item:nth-child(2) .contact-icon {
     background: linear-gradient(135deg, #00ffff, #b400ff);
 }
@@ -931,7 +930,7 @@ body {
     background: linear-gradient(135deg, #00ff88, #00d4ff);
 }
 
-/* Icon Hover Effects */
+
 .contact-item .contact-icon:hover {
     transform: scale(1.05);
     border-color: rgba(255, 255, 255, 0.5);
@@ -952,14 +951,14 @@ body {
     background: linear-gradient(135deg, #00d4ff, #00ff88);
 }
 
-/* Icon Size Consistency */
+
 .contact-item .contact-icon i {
     font-size: 1.5rem !important;
     color: #ffffff !important;
     line-height: 1;
 }
 
-/* Enhanced Contact Details */
+
 .contact-details {
     flex: 1;
     min-width: 0;
@@ -991,7 +990,7 @@ body {
     font-style: italic;
 }
 
-/* Email Buttons */
+
 .email-buttons {
     display: flex;
     gap: 0.75rem;
@@ -1032,7 +1031,7 @@ body {
     color: #0a0a0a;
 }
 
-/* Enhanced Social Links */
+
 .social-links {
     display: flex;
     gap: 1rem;
@@ -1079,7 +1078,7 @@ body {
     left: 100%;
 }
 
-/* Enhanced Form Styling */
+
 .form-group {
     position: relative;
 }
@@ -1140,7 +1139,7 @@ body {
     opacity: 0.3;
 }
 
-/* Form Note */
+
 .form-note {
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
@@ -1153,7 +1152,7 @@ body {
     margin-right: 0.5rem;
 }
 
-/* Stats Animation */
+
 .stats-container {
     display: grid;
     gap: 1.5rem;
@@ -1208,7 +1207,7 @@ body {
     to { transform: translateX(0); }
 }
 
-/* Footer */
+
 .futuristic-footer {
     background: rgba(10, 10, 10, 0.9);
     border-top: 1px solid rgba(0, 255, 255, 0.3);
@@ -1221,7 +1220,7 @@ body {
     background: rgba(255, 255, 255, 0.02);
 }
 
-/* Modals */
+
 .futuristic-modal .modal-content {
     background: rgba(10, 10, 10, 0.95);
     border: 1px solid rgba(0, 255, 255, 0.3);
@@ -1254,9 +1253,9 @@ body {
     border: 1px solid rgba(0, 255, 255, 0.3);
 }
 
-/* Responsive Design - SINGLE LINE NAME OPTIMIZED */
+
 @media (max-width: 768px) {
-    /* Hero Section Mobile */
+
     .hero-section {
         padding: 0;
         margin-top: -60px;
@@ -1272,7 +1271,7 @@ body {
     }
     
     .profile-container {
-        margin-bottom: 2.5rem; /* More space on mobile */
+        margin-bottom: 2.5rem; 
         margin-top: 0;
         padding: 1.5rem;
     }
@@ -1294,9 +1293,9 @@ body {
     }
     
     .hero-title {
-        font-size: 2.2rem; /* Optimized for single line on mobile */
+        font-size: 2.2rem; 
         letter-spacing: 0.5px;
-        margin: 1.5rem 0; /* More space from photo */
+        margin: 1.5rem 0; 
         white-space: nowrap;
     }
     
@@ -1335,7 +1334,7 @@ body {
         font-size: 0.875rem;
     }
     
-    /* Enhanced Mobile Contact Item Centering */
+    
     .contact-item {
         flex-direction: column;
         text-align: center;
@@ -1378,7 +1377,7 @@ body {
 }
 
 @media (max-width: 576px) {
-    /* Extra small mobile - Single line name focus */
+    
     .hero-section {
         padding: 0;
         margin-top: -50px;
@@ -1394,7 +1393,7 @@ body {
     }
     
     .hero-title {
-        font-size: 1.8rem; /* Smaller but still single line */
+        font-size: 1.8rem; 
         letter-spacing: 0.5px;
         margin: 1.2rem 0;
         white-space: nowrap;
@@ -1418,7 +1417,7 @@ body {
         width: 100%;
     }
     
-    /* Additional Mobile Contact Centering */
+  
     .contact-item {
         align-items: center;
         justify-content: center;
@@ -1441,10 +1440,10 @@ body {
     }
 }
 
-/* Extra small screens - Ensure single line always */
+
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 1.6rem; /* Smallest size to ensure single line */
+        font-size: 1.6rem; 
         letter-spacing: 0.3px;
         white-space: nowrap;
         overflow: visible;
@@ -1461,7 +1460,7 @@ body {
     }
 }
 
-/* Additional Animations */
+
 .futuristic-section {
     position: relative;
 }
@@ -1477,7 +1476,7 @@ body {
     opacity: 0.3;
 }
 
-/* Scroll-triggered animations */
+
 .animate-in {
     opacity: 0;
     transform: translateY(30px);
@@ -1489,12 +1488,12 @@ body {
     transform: translateY(0);
 }
 
-/* Counter animation */
+
 .counter {
     display: inline-block;
 }
 
-/* Loading states */
+
 .loading {
     position: relative;
     overflow: hidden;
@@ -1516,7 +1515,7 @@ body {
     100% { left: 100%; }
 }
 
-/* Animations */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1527,3 +1526,4 @@ body {
         transform: translateY(0);
     }
 }
+
