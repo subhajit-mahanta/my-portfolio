@@ -1,4 +1,3 @@
-// Enhanced smooth scrolling with easing
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -12,7 +11,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Enhanced navbar effects
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.futuristic-nav');
     const scrolled = window.scrollY > 100;
@@ -26,7 +24,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Active navigation with glow effect
 window.addEventListener('scroll', function() {
     let current = '';
     const sections = document.querySelectorAll('section');
@@ -49,7 +46,6 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Typing animation for hero
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.textContent = '';
@@ -64,7 +60,6 @@ function typeWriter(element, text, speed = 100) {
     }, speed);
 }
 
-// Counter animation
 function animateCounters() {
     const counters = document.querySelectorAll('.counter');
     
@@ -86,7 +81,6 @@ function animateCounters() {
     });
 }
 
-// Intersection Observer for animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -97,12 +91,10 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             
-            // Trigger counter animation
             if (entry.target.querySelector('.counter')) {
                 animateCounters();
             }
             
-            // Trigger progress bar animation
             if (entry.target.classList.contains('skill-item')) {
                 const progressFill = entry.target.querySelector('.progress-fill');
                 if (progressFill) {
@@ -115,7 +107,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Copy email functionality with enhanced feedback
 function copyEmail() {
     const email = 'subhajitmahantaofficial@gmail.com';
     const copyBtn = document.getElementById('copyEmailBtn');
@@ -171,7 +162,6 @@ function showCopySuccess(button) {
     }, 2000);
 }
 
-// Enhanced contact form handling
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -207,7 +197,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     }, 2000);
 });
 
-// Notification system
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
@@ -237,7 +226,6 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
-// Add slide animations to CSS
 const style = document.createElement('style');
 style.textContent = `
     @keyframes slideIn {
@@ -252,7 +240,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Dynamic particle generation
 function createDynamicParticles() {
     const background = document.querySelector('.animated-background');
     if (!background) return;
@@ -282,7 +269,6 @@ function createDynamicParticles() {
         }, 4000);
     }, 500);
     
-    // Add float animation
     const floatStyle = document.createElement('style');
     floatStyle.textContent = `
         @keyframes floatUp {
@@ -295,7 +281,6 @@ function createDynamicParticles() {
     document.head.appendChild(floatStyle);
 }
 
-// Enhanced modal effects
 document.querySelectorAll('[data-bs-toggle="modal"]').forEach(trigger => {
     trigger.addEventListener('click', function() {
         const targetModal = document.querySelector(this.getAttribute('data-bs-target'));
@@ -307,7 +292,6 @@ document.querySelectorAll('[data-bs-toggle="modal"]').forEach(trigger => {
     });
 });
 
-// Initialize everything
 document.addEventListener('DOMContentLoaded', function() {
     // Add animate-in class to all animatable elements
     const animatableElements = document.querySelectorAll('.futuristic-card, .glass-panel, .stat-item');
@@ -316,17 +300,14 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
     
-    // Initialize typing animation
     const heroName = document.getElementById('heroName');
     if (heroName) {
         const originalText = heroName.textContent;
         typeWriter(heroName, originalText, 100);
     }
-    
-    // Start dynamic particles
+
     createDynamicParticles();
     
-    // Initialize progress bars
     setTimeout(() => {
         document.querySelectorAll('.progress-fill').forEach(bar => {
             bar.style.width = '0%';
@@ -334,7 +315,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
 });
 
-// Debounce function for performance
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -347,18 +327,17 @@ function debounce(func, wait) {
     };
 }
 
-// Performance optimizations
 const debouncedScroll = debounce(() => {
-    // Any scroll-heavy operations
+
 }, 16);
 
 window.addEventListener('scroll', debouncedScroll);
 
-// Add loading effect to page
+
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     
-    // Remove any loading overlays
+
     const loader = document.querySelector('.page-loader');
     if (loader) {
         loader.style.opacity = '0';
@@ -367,3 +346,4 @@ window.addEventListener('load', function() {
         }, 500);
     }
 });
+
